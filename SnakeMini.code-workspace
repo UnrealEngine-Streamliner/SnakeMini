@@ -1,0 +1,852 @@
+{
+	"folders": [
+		{
+			"name": "SnakeMini",
+			"path": "."
+		},
+		{
+			"name": "UE5",
+			"path": "/Users/Shared/Epic Games/UE_5.3"
+		}
+	],
+	"settings": {
+		"typescript.tsc.autoDetect": "off",
+		"npm.autoDetect": "off"
+	},
+	"extensions": {
+		"recommendations": [
+			"ms-vscode.cpptools",
+			"ms-dotnettools.csharp",
+			"vadimcn.vscode-lldb",
+			"ms-vscode.mono-debug",
+			"dfarley1.file-picker"
+		]
+	},
+	"tasks": {
+		"version": "2.0.0",
+		"tasks": [
+			{
+				"label": "SnakeMini Mac Debug Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"SnakeMini",
+					"Mac",
+					"Debug",
+					"/Users/tiger/Documents/Unreal/SnakeMini/SnakeMini.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "SnakeMini Mac Debug Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"SnakeMini",
+					"Mac",
+					"Debug",
+					"/Users/tiger/Documents/Unreal/SnakeMini/SnakeMini.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"SnakeMini Mac Debug Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "SnakeMini Mac Debug Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"SnakeMini",
+					"Mac",
+					"Debug",
+					"/Users/tiger/Documents/Unreal/SnakeMini/SnakeMini.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "SnakeMini Mac DebugGame Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"SnakeMini",
+					"Mac",
+					"DebugGame",
+					"/Users/tiger/Documents/Unreal/SnakeMini/SnakeMini.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "SnakeMini Mac DebugGame Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"SnakeMini",
+					"Mac",
+					"DebugGame",
+					"/Users/tiger/Documents/Unreal/SnakeMini/SnakeMini.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"SnakeMini Mac DebugGame Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "SnakeMini Mac DebugGame Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"SnakeMini",
+					"Mac",
+					"DebugGame",
+					"/Users/tiger/Documents/Unreal/SnakeMini/SnakeMini.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "SnakeMini Mac Development Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"SnakeMini",
+					"Mac",
+					"Development",
+					"/Users/tiger/Documents/Unreal/SnakeMini/SnakeMini.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "SnakeMini Mac Development Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"SnakeMini",
+					"Mac",
+					"Development",
+					"/Users/tiger/Documents/Unreal/SnakeMini/SnakeMini.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"SnakeMini Mac Development Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "SnakeMini Mac Development Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"SnakeMini",
+					"Mac",
+					"Development",
+					"/Users/tiger/Documents/Unreal/SnakeMini/SnakeMini.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "SnakeMini Mac Test Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"SnakeMini",
+					"Mac",
+					"Test",
+					"/Users/tiger/Documents/Unreal/SnakeMini/SnakeMini.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "SnakeMini Mac Test Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"SnakeMini",
+					"Mac",
+					"Test",
+					"/Users/tiger/Documents/Unreal/SnakeMini/SnakeMini.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"SnakeMini Mac Test Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "SnakeMini Mac Test Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"SnakeMini",
+					"Mac",
+					"Test",
+					"/Users/tiger/Documents/Unreal/SnakeMini/SnakeMini.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "SnakeMini Mac Shipping Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"SnakeMini",
+					"Mac",
+					"Shipping",
+					"/Users/tiger/Documents/Unreal/SnakeMini/SnakeMini.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "SnakeMini Mac Shipping Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"SnakeMini",
+					"Mac",
+					"Shipping",
+					"/Users/tiger/Documents/Unreal/SnakeMini/SnakeMini.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"SnakeMini Mac Shipping Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "SnakeMini Mac Shipping Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"SnakeMini",
+					"Mac",
+					"Shipping",
+					"/Users/tiger/Documents/Unreal/SnakeMini/SnakeMini.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "SnakeMini IOS Debug Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"SnakeMini",
+					"IOS",
+					"Debug",
+					"/Users/tiger/Documents/Unreal/SnakeMini/SnakeMini.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "SnakeMini IOS Debug Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"SnakeMini",
+					"IOS",
+					"Debug",
+					"/Users/tiger/Documents/Unreal/SnakeMini/SnakeMini.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"SnakeMini IOS Debug Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "SnakeMini IOS Debug Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"SnakeMini",
+					"IOS",
+					"Debug",
+					"/Users/tiger/Documents/Unreal/SnakeMini/SnakeMini.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "SnakeMini IOS DebugGame Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"SnakeMini",
+					"IOS",
+					"DebugGame",
+					"/Users/tiger/Documents/Unreal/SnakeMini/SnakeMini.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "SnakeMini IOS DebugGame Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"SnakeMini",
+					"IOS",
+					"DebugGame",
+					"/Users/tiger/Documents/Unreal/SnakeMini/SnakeMini.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"SnakeMini IOS DebugGame Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "SnakeMini IOS DebugGame Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"SnakeMini",
+					"IOS",
+					"DebugGame",
+					"/Users/tiger/Documents/Unreal/SnakeMini/SnakeMini.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "SnakeMini IOS Development Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"SnakeMini",
+					"IOS",
+					"Development",
+					"/Users/tiger/Documents/Unreal/SnakeMini/SnakeMini.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "SnakeMini IOS Development Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"SnakeMini",
+					"IOS",
+					"Development",
+					"/Users/tiger/Documents/Unreal/SnakeMini/SnakeMini.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"SnakeMini IOS Development Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "SnakeMini IOS Development Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"SnakeMini",
+					"IOS",
+					"Development",
+					"/Users/tiger/Documents/Unreal/SnakeMini/SnakeMini.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "SnakeMini IOS Test Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"SnakeMini",
+					"IOS",
+					"Test",
+					"/Users/tiger/Documents/Unreal/SnakeMini/SnakeMini.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "SnakeMini IOS Test Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"SnakeMini",
+					"IOS",
+					"Test",
+					"/Users/tiger/Documents/Unreal/SnakeMini/SnakeMini.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"SnakeMini IOS Test Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "SnakeMini IOS Test Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"SnakeMini",
+					"IOS",
+					"Test",
+					"/Users/tiger/Documents/Unreal/SnakeMini/SnakeMini.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "SnakeMini IOS Shipping Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"SnakeMini",
+					"IOS",
+					"Shipping",
+					"/Users/tiger/Documents/Unreal/SnakeMini/SnakeMini.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "SnakeMini IOS Shipping Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"SnakeMini",
+					"IOS",
+					"Shipping",
+					"/Users/tiger/Documents/Unreal/SnakeMini/SnakeMini.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"SnakeMini IOS Shipping Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "SnakeMini IOS Shipping Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"SnakeMini",
+					"IOS",
+					"Shipping",
+					"/Users/tiger/Documents/Unreal/SnakeMini/SnakeMini.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "SnakeMiniEditor Mac Debug Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"SnakeMiniEditor",
+					"Mac",
+					"Debug",
+					"/Users/tiger/Documents/Unreal/SnakeMini/SnakeMini.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "SnakeMiniEditor Mac Debug Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"SnakeMiniEditor",
+					"Mac",
+					"Debug",
+					"/Users/tiger/Documents/Unreal/SnakeMini/SnakeMini.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"SnakeMiniEditor Mac Debug Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "SnakeMiniEditor Mac Debug Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"SnakeMiniEditor",
+					"Mac",
+					"Debug",
+					"/Users/tiger/Documents/Unreal/SnakeMini/SnakeMini.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "SnakeMiniEditor Mac DebugGame Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"SnakeMiniEditor",
+					"Mac",
+					"DebugGame",
+					"/Users/tiger/Documents/Unreal/SnakeMini/SnakeMini.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "SnakeMiniEditor Mac DebugGame Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"SnakeMiniEditor",
+					"Mac",
+					"DebugGame",
+					"/Users/tiger/Documents/Unreal/SnakeMini/SnakeMini.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"SnakeMiniEditor Mac DebugGame Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "SnakeMiniEditor Mac DebugGame Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"SnakeMiniEditor",
+					"Mac",
+					"DebugGame",
+					"/Users/tiger/Documents/Unreal/SnakeMini/SnakeMini.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "SnakeMiniEditor Mac Development Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"SnakeMiniEditor",
+					"Mac",
+					"Development",
+					"/Users/tiger/Documents/Unreal/SnakeMini/SnakeMini.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "SnakeMiniEditor Mac Development Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"SnakeMiniEditor",
+					"Mac",
+					"Development",
+					"/Users/tiger/Documents/Unreal/SnakeMini/SnakeMini.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"SnakeMiniEditor Mac Development Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "SnakeMiniEditor Mac Development Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"SnakeMiniEditor",
+					"Mac",
+					"Development",
+					"/Users/tiger/Documents/Unreal/SnakeMini/SnakeMini.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			}
+		]
+	},
+	"launch": {
+		"version": "0.2.0",
+		"configurations": [
+			{
+				"name": "Launch SnakeMini (Debug)",
+				"request": "launch",
+				"program": "/Users/tiger/Documents/Unreal/SnakeMini/Binaries/Mac/UnrealGame-Mac-Debug.app/Contents/MacOS/UnrealGame-Mac-Debug",
+				"preLaunchTask": "SnakeMini Mac Debug Build",
+				"args": [
+				],
+				"cwd": "/Users/Shared/Epic Games/UE_5.3",
+				"type": "lldb"
+			},
+			{
+				"name": "Launch SnakeMini (DebugGame)",
+				"request": "launch",
+				"program": "/Users/tiger/Documents/Unreal/SnakeMini/Binaries/Mac/UnrealGame-Mac-DebugGame.app/Contents/MacOS/UnrealGame-Mac-DebugGame",
+				"preLaunchTask": "SnakeMini Mac DebugGame Build",
+				"args": [
+				],
+				"cwd": "/Users/Shared/Epic Games/UE_5.3",
+				"type": "lldb"
+			},
+			{
+				"name": "Launch SnakeMini (Development)",
+				"request": "launch",
+				"program": "/Users/tiger/Documents/Unreal/SnakeMini/Binaries/Mac/UnrealGame.app/Contents/MacOS/UnrealGame",
+				"preLaunchTask": "SnakeMini Mac Development Build",
+				"args": [
+				],
+				"cwd": "/Users/Shared/Epic Games/UE_5.3",
+				"type": "lldb"
+			},
+			{
+				"name": "Launch SnakeMini (Test)",
+				"request": "launch",
+				"program": "/Users/tiger/Documents/Unreal/SnakeMini/Binaries/Mac/UnrealGame-Mac-Test.app/Contents/MacOS/UnrealGame-Mac-Test",
+				"preLaunchTask": "SnakeMini Mac Test Build",
+				"args": [
+				],
+				"cwd": "/Users/Shared/Epic Games/UE_5.3",
+				"type": "lldb"
+			},
+			{
+				"name": "Launch SnakeMini (Shipping)",
+				"request": "launch",
+				"program": "/Users/tiger/Documents/Unreal/SnakeMini/Binaries/Mac/UnrealGame-Mac-Shipping.app/Contents/MacOS/UnrealGame-Mac-Shipping",
+				"preLaunchTask": "SnakeMini Mac Shipping Build",
+				"args": [
+				],
+				"cwd": "/Users/Shared/Epic Games/UE_5.3",
+				"type": "lldb"
+			},
+			{
+				"name": "Launch SnakeMiniEditor (Debug)",
+				"request": "launch",
+				"program": "/Users/Shared/Epic Games/UE_5.3/Engine/Binaries/Mac/UnrealEditor-Mac-Debug.app/Contents/MacOS/UnrealEditor-Mac-Debug",
+				"preLaunchTask": "SnakeMiniEditor Mac Debug Build",
+				"args": [
+					"/Users/tiger/Documents/Unreal/SnakeMini/SnakeMini.uproject"
+				],
+				"cwd": "/Users/Shared/Epic Games/UE_5.3",
+				"type": "lldb"
+			},
+			{
+				"name": "Launch SnakeMiniEditor (DebugGame)",
+				"request": "launch",
+				"program": "/Users/Shared/Epic Games/UE_5.3/Engine/Binaries/Mac/UnrealEditor-Mac-DebugGame.app/Contents/MacOS/UnrealEditor-Mac-DebugGame",
+				"preLaunchTask": "SnakeMiniEditor Mac DebugGame Build",
+				"args": [
+					"/Users/tiger/Documents/Unreal/SnakeMini/SnakeMini.uproject"
+				],
+				"cwd": "/Users/Shared/Epic Games/UE_5.3",
+				"type": "lldb"
+			},
+			{
+				"name": "Launch SnakeMiniEditor (Development)",
+				"request": "launch",
+				"program": "/Users/Shared/Epic Games/UE_5.3/Engine/Binaries/Mac/UnrealEditor.app/Contents/MacOS/UnrealEditor",
+				"preLaunchTask": "SnakeMiniEditor Mac Development Build",
+				"args": [
+					"/Users/tiger/Documents/Unreal/SnakeMini/SnakeMini.uproject"
+				],
+				"cwd": "/Users/Shared/Epic Games/UE_5.3",
+				"type": "lldb"
+			},
+			{
+				"name": "Generate Project Files",
+				"type": "coreclr",
+				"request": "launch",
+				"preLaunchTask": "UnrealBuildTool Mac Development Build",
+				"program": "/Users/Shared/Epic Games/UE_5.3/Engine/Build/BatchFiles/RunUBT.bat",
+				"args": [
+					"-projectfiles",
+					"-vscode",
+					"-project=/Users/tiger/Documents/Unreal/SnakeMini/SnakeMini.uproject",
+					"-game",
+					"-engine",
+					"-dotnet"
+				],
+				"console": "internalConsole",
+				"internalConsoleOptions": "openOnSessionStart",
+				"stopAtEntry": false,
+				"cwd": "/Users/Shared/Epic Games/UE_5.3"
+			}
+		]
+	}
+}
